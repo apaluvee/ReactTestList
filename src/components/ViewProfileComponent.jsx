@@ -18,18 +18,55 @@ function ViewProfileComponent() {
             <div className="card col-md-6 offset-md-3">
                 <h3 className="text-center">View Profile Details</h3>
                 <div className="card-body">
-                    <div className="row">
-                        <label>Profile Username:</label>
-                        <div>{profile.username}</div>
-                    </div>
-                    <div className="row">
-                        <label>Display Name:</label>
-                        <div>{profile.displayName}</div>
-                    </div>
-                    <div className="row">
-                        <label>Display Image:</label>
-                        <div>{profile.displayImg}</div>
-                    </div>
+                    <table className="table table-striped">
+                        <thead>
+                            <tr>
+                                <th className="text-center">Profile Username</th>
+                                <th className="text-center">Display Name</th>
+                                <th className="text-center">Display Image</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td className="text-center">{profile.username}</td>
+                                <td className="text-center">{profile.displayName}</td>
+                                <td className="text-center">{profile.displayImg}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            {/* Display Records */}
+            <div className="card col-md-8 offset-md-2 mt-4">
+                <h3 className="text-center">Records</h3>
+                <div className="card-body">
+                    <table className="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Activity Name</th>
+                                <th>Text</th>
+                                <th>Color</th>
+                                <th>Icon</th>
+                                <th>Max Value</th>
+                                <th>Increment Value</th>
+                                <th>Unit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {profile.records && profile.records.map((record) => (
+                                <tr key={record.id}>
+                                    <td>{record.activityName}</td>
+                                    <td>{record.text}</td>
+                                    <td>{record.color}</td>
+                                    <td>{record.icon}</td>
+                                    <td>{record.maxValue}</td>
+                                    <td>{record.incrementValue}</td>
+                                    <td>{record.unit}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
