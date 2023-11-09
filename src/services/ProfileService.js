@@ -25,4 +25,4 @@ class ProfileService {
     }
 }
 
-export default new ProfileService()
+export default new ProfileService();

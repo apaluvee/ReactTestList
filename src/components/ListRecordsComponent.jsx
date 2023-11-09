@@ -43,7 +43,7 @@ function ListRecordsComponent() {
         <table className="table table-striped table-bordered">
           <thead>
             <tr>
-            <th> ID </th>
+              <th> ID </th>
               <th> Profile ID </th>
               <th> Activity Name </th>
               <th> Text </th>
@@ -70,10 +70,9 @@ function ListRecordsComponent() {
                 <td>
                   <button onClick={() => editRecords(record.id)} className="btn btn-info">Update</button>
                   <button style={{ marginLeft: "10px" }} onClick={() => deleteRecord(record.id)} className="btn btn-danger">Delete</button>
-                  <button style={{ marginLeft: "10px" }} onClick={() => viewRecords(record.id)} className="btn btn-info">View</button>
                 </td>
               </tr>
-            ))}
+            ))};
           </tbody>
         </table>
       </div>

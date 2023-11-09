@@ -25,4 +25,4 @@ class RecordsService {
     }
 }
 
-export default new RecordsService()
+export default new RecordsService();
