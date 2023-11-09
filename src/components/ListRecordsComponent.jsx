@@ -32,7 +32,7 @@ function ListRecordsComponent() {
 
   return (
     <div>
-      <h2 className="text-center">Records List</h2>
+      <h2>Records List</h2>
       <div className="row">
         <button className="btn btn-primary" onClick={addRecords}>
           Add Records

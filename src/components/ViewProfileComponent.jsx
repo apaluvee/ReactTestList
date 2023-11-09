@@ -16,7 +16,7 @@ function ViewProfileComponent() {
         <div>
             <br />
             <div className="card col-md-6 offset-md-3">
-                <h3 className="text-center">View Profile Details</h3>
+                <h3 className="text-center">Profile</h3>
                 <div className="card-body">
                     <table className="table table-striped">
                         <thead>
@@ -39,7 +39,7 @@ function ViewProfileComponent() {
 
             {/* Display Records */}
             <div className="card col-md-8 offset-md-2 mt-4">
-                <h3 className="text-center">Records</h3>
+                <h3 className="text-center">All Records</h3>
                 <div className="card-body">
                     <table className="table table-striped">
                         <thead>

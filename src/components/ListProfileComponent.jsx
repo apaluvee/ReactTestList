@@ -34,11 +34,12 @@ function ListProfileComponent() {
   return (
     <div>
       <h2>Profiles List</h2>
-
-      <button className="btn btn-primary" onClick={addProfile}>
-        Add Profile
-      </button>
-
+      <div className="row">
+        <button className="btn btn-primary" onClick={addProfile}>
+          Add Profile
+        </button>
+      </div>
+      <br></br>
       <div className='row'>
         <table className='table table-striped table-bordered'>
           <thead>

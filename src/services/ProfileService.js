@@ -13,7 +13,7 @@ class ProfileService {
     }
 
     getProfileById(profileId) {
-        return axios.get(PROFILE_API_BASE_URL + "/" + profileId);
+        return axios.get(`${PROFILE_API_BASE_URL}/${profileId}/records`);
     }
 
     updateProfile(profile, profileId) {

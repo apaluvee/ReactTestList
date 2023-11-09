@@ -32,7 +32,8 @@ export default class HeaderComponent extends Component {
             <div>
                 <header>
                     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                    <div> <a href="https://javaguides.net" className="navbar-brand">Profile Management App</a></div>
+                    <div> <a href="http://localhost:3000/profiles" className="navbar-brand">Profiles</a></div>
+                    <div> <a href="http://localhost:3000/records" className="navbar-brand">Records</a></div>
                     </nav>
                 </header>
             </div>
