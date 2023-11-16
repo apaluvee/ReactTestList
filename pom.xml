@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.github.apaluvee</groupId>
+  <artifactId>ReactTestList</artifactId>
+  <version>0.0.1</version>
+  <packaging>pom</packaging>
+
+  <!-- 
+    if react app still keeps running on port 3000 after mvn install is terminated run:
+    1. netstat -ano | findstr :3000
+    2. taskkill /PID <PID> /F  (replace PID with process ID thats LISTENING on port 3000)
+  -->
+
+  <!-- https://github.com/eirslett/frontend-maven-plugin/tree/master -->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <!-- NB! Set <version> to the latest released version of frontend-maven-plugin, like in README.md -->
+        <version>1.14.2</version>
+
+        <executions>
+          <execution>
+            <id>install node and npm</id>
+            <goals>
+              <goal>install-node-and-npm</goal>
+            </goals>
+            <configuration>
+              <!-- See https://nodejs.org/en/download/ for latest node and npm (lts) versions -->
+              <nodeVersion>v21.1.0</nodeVersion>
+              <npmVersion>10.2.3</npmVersion>
+            </configuration>
+          </execution>
+
+          <execution>
+            <!-- npm clean install -->
+            <id>npm ci</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>ci</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>npm run start</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>run start</arguments>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
