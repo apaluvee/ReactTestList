@@ -72,7 +72,7 @@ function ListRecordsComponent() {
                   <button style={{ marginLeft: "10px" }} onClick={() => deleteRecord(record.id)} className="btn btn-danger">Delete</button>
                 </td>
               </tr>
-            ))};
+            ))}
           </tbody>
         </table>
       </div>

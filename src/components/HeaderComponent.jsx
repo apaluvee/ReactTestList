@@ -34,6 +34,7 @@ export default class HeaderComponent extends Component {
                     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                     <div> <a href="http://localhost:3000/profiles" className="navbar-brand">Profiles</a></div>
                     <div> <a href="http://localhost:3000/records" className="navbar-brand">Records</a></div>
+                    <div> <a href="http://localhost:3000/data" className="navbar-brand">DataEntity</a></div>
                     </nav>
                 </header>
             </div>
